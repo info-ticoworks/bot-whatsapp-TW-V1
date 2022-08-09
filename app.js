@@ -128,7 +128,7 @@ const listenMessage = () => client.on('message', async msg => {
 
 client = new Client({
         authStrategy: new LocalAuth(),
-        puppeteer: { headless: true, args: ['--no-sandbox'] }
+        puppeteer: { headless: true }
     });
     
 client.on('qr', qr => generateImage(qr, () => {
