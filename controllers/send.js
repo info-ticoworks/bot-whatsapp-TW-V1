@@ -42,7 +42,7 @@ const sendMedia = (client, number = null, fileName = null) => {
         const file = `${DIR_MEDIA}/${fileName}`;
         if (fs.existsSync(file)) {
             const media = MessageMedia.fromFilePath(file);
-            client.sendMessage(number, media ,{ sendAudioAsVoice: true });
+            client.sendMessage(number, media ,{ sendAudioAsVoice: true });}
     } catch(e) {
         throw e;
     }
