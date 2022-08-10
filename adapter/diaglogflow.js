@@ -32,7 +32,7 @@ const checkFileCredentials = () => {
 // Detect intent method
 const detectIntent = async (queryText) => {
     let media = null;
-    const sessionId = KEEP_DIALOG_FLOW ? 1 : nanoid();
+    const sessionId = KEEP_DIALOG_FLOW ? 10 : nanoid();
     const sessionPath = sessionClient.projectAgentSessionPath(PROJECID, sessionId);
     const languageCode = process.env.LANGUAGE
     const request = {

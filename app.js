@@ -29,6 +29,7 @@ app.use('/', require('./routes/web'))
  */
 const listenMessage = () => client.on('message', async msg => {
     const { from, body, hasMedia } = msg;
+    const contact = await msg.getContact();
 
     if(!isValidNumber(from)){
         return
@@ -39,7 +40,13 @@ const listenMessage = () => client.on('message', async msg => {
         return
     }
     message = body.toLowerCase();
-    console.log('BODY',message)
+    mensaje = msg.body;
+    sender = msg.from;
+    contacto = contact.pushname
+    numero = contact.number
+    console.log('Mensaje: ',mensaje)
+    console.log('Sender: ',contacto)
+    console.log('Número: ',numero)
     const number = cleanNumber(from)
     await readChat(number, message)
 

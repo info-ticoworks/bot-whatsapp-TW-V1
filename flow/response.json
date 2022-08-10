@@ -22,10 +22,11 @@
     },
     "STEP_1":{
         "replyMessage":[
-            "Hola! y✌️ Bienvenido a este 🤖 CHATBOT de Whatsapp, lo primero \n",
-            "decirte que mi nombre es *Leifer Mendez*😎  \n",
-            "\n Si necesitas ver más info sobre las capacitacion tecnicas ",
-            "escribe *cursos* o *info* o escribe *audio*"
+            "Hola! ", 
+            "Gracias por comunicarse con TicoWorks, en qué podemos ayudarle?",
+            "",
+            "1. Información.", 
+            "2. Soporte."
         ],
         "media":"https://media2.giphy.com/media/VQJu0IeULuAmCwf5SL/giphy.gif",
         "trigger":null,

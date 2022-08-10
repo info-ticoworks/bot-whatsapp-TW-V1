@@ -61,8 +61,7 @@ const sendMessage = async (client, number = null, text = null, trigger = null) =
     client.sendMessage(number, message);
     await readChat(number, message, trigger)
     console.log(`⚡⚡⚡ Enviando mensajes....`);
-   },DELAY_TIME)
-}
+   },DELAY_TIME)}
 
 /**
  * Enviamos un mensaje con buttons a nuestro cliente
