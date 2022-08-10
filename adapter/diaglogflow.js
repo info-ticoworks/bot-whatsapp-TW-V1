@@ -1,6 +1,6 @@
 const dialogflow = require('@google-cloud/dialogflow');
-const fs = require('fs')
-const { nanoid } = import('nanoid')
+const fs = require('fs');
+const { nanoid } = require('nanoid');
 /**
  * Debes de tener tu archivo con el nombre "chatbot-account.json" en la raíz del proyecto
  */
@@ -49,14 +49,16 @@ const detectIntent = async (queryText) => {
     const [singleResponse] = responses;
     const { queryResult } = singleResponse
     const { intent } = queryResult || { intent: {} }
-    const parseIntent = intent['displayName'] || null
+    //const parseIntent = intent['displayName'] || null
     const parsePayload = queryResult['fulfillmentMessages'].find((a) => a.message === 'payload');
     // console.log(singleResponse)
-    if (parsePayload && parsePayload.payload) {
-        const { fields } = parsePayload.payload
-        media = fields.media.stringValue || null
+    if(parsePayload!==undefined){
+        if (parsePayload && parsePayload.payload) {
+            const { fields } = parsePayload.payload
+            media = fields.media.stringValue || null
+        }
+        const customPayload = parsePayload['payload']
     }
-    const customPayload = parsePayload['payload']
 
     const parseData = {
         replyMessage: queryResult.fulfillmentText,

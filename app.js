@@ -4,7 +4,7 @@
 require('dotenv').config();
 const fs = require('fs');
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
 const qrcode = require('qrcode-terminal');
 const { Client,LocalAuth  } = require('whatsapp-web.js');
 const mysqlConnection = require('./config/mysql')
