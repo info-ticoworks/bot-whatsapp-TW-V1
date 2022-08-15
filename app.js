@@ -53,10 +53,10 @@ const listenMessage = () => client.on('message', async msg => {
     /**
      * Guardamos el archivo multimedia que envia
      */
-    if (process.env.SAVE_MEDIA && hasMedia) {
-        const media = await msg.downloadMedia();
-        saveMedia(media);
-    }
+    //if (process.env.SAVE_MEDIA && hasMedia) {
+    //    const media = await msg.downloadMedia();
+    //    saveMedia(media);
+    //}
 
     /**
      * Si estas usando dialogflow solo manejamos una funcion todo es IA
