@@ -30,5 +30,5 @@ WORKDIR /app
 COPY ./ ./
 
 RUN npm install
-RUN npm instal -g nodemon
-CMD ["nodemon"]
+RUN npm install -g nodemon
+CMD ["npm start"]
