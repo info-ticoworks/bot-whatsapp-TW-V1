@@ -29,6 +29,5 @@ RUN apk add npm
 WORKDIR /app
 
 COPY ./ ./
-EXPOSE 80
-RUN npm install
+EXPOSE 3000
 CMD ["npm", "start"]
