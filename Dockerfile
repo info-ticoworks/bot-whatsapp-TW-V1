@@ -9,7 +9,8 @@ RUN apk add --no-cache \
       ca-certificates \
       ttf-freefont \
       nodejs \
-      yarn
+      yarn \
+      bash
 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
@@ -28,7 +29,5 @@ RUN apk add npm
 WORKDIR /app
 
 COPY ./ ./
-
-RUN npm install
-RUN npm install -g nodemon
-CMD ["nodemon"]
+EXPOSE 3000
+CMD ["npm", "start"]
